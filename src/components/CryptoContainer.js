@@ -7,7 +7,6 @@ import { getPrices } from '../actions'
 import Crypto from './Crypto'
 
 const screenWidth = Dimensions.get('window').width
-
 const styles = StyleSheet.create({
     contentContainer: {
         paddingBottom: 100,
@@ -32,7 +31,6 @@ class CryptoContainer extends Component {
             arrayData.push(temp)
         }
         return arrayData.map((coin, index) => {
-            console.log(coin)
             return <Crypto 
                 key={index}
                 coin_name={coin.name}

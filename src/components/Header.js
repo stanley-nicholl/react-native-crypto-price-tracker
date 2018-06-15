@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, Dimensions, Platform } from 'react-native'
 
 const screenWidth = Dimensions.get('window').width
 
@@ -14,7 +14,7 @@ const Header = () => {
 const styles = StyleSheet.create({
     headerContainer: {
         display: 'flex',
-        marginTop: 0,
+        marginTop: Platform.OS === 'ios' ? 30 : 0,
         alignItems: 'center',
         backgroundColor: '#848584',
         width: screenWidth,
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     header: {
         fontWeight: 'bold',
         fontSize: 20,
-        color: '#fff'
+        color: '#fff',
     }
 })
 

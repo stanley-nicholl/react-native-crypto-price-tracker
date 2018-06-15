@@ -77,7 +77,6 @@ const {
 } = styles;
 
 const Crypto = ({ symbol, coin_name, price_usd, percent_change_24h, percent_change_7d }) => {
-    console.log(price_usd)
     return (
         <View style={container}>
 
